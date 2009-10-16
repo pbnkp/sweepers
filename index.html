@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Sweepers</title>
+    
+    <script type="text/javascript" src="http://static.redflex.co.uk/js/mootools-1.2.3-core.js"></script>
+    
+    <style>
+        body { background: #fafafa; }
+    </style>
+</head>
+
+<body>
+    <div id="sweepers-container"></div>
+    
+    <script type="text/javascript" src="js/raphael.min.js"></script>
+    <script type="text/javascript" src="js/neural_net.js"></script>
+    <script type="text/javascript" src="js/sweepers.js"></script>
+    
+    <script type="text/javascript">
+        Sweepers.init({
+            canvas_height: 390,
+            canvas_width: 850,
+        });
+        /*
+        var paper = Raphael($('sweepers-container'), 850, 390);
+        var circle = paper.circle(50, 40, 5);
+        circle.attr("fill", "#f00");
+        circle.attr("stroke", "#f00");*/
+    </script>
+</body>
+
+</html>
