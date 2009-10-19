@@ -48,7 +48,12 @@ var Sweepers = {
     main: function(){
         for (var i in this.sweepers) {
             if (this.sweepers[i].sprite != undefined) {
+                // find the nearest piece of food
                 this.sweepers[i].target = this.findFood(this.sweepers[i].coord);
+                
+                // through the target into the neural net
+                var results = this.sweepers[i].brain.update(this.sweepers[i].target);
+                
                 this.sweepers[i].coord[0] = this.sweepers[i].coord[0] + 0.5;
                 this.sweepers[i].coord[1] = this.sweepers[i].coord[1] + 0.5;
                 this.sweepers[i].sprite.translate(0.5, 0.5);

@@ -81,13 +81,13 @@ var NeuralNet = new Class({
        var weight = 0;
 
        // check that we have the correct number of inputs
-       if (inputs.length() != this.settings.inputs) {
+       if (inputs.length != this.settings.inputs) {
            // return an empty array if incorrect
            return outputs;
        }
 
        // for each layer..
-       for (var i=0; i<this.settings.layers+1; i++){
+       for (var i=0; i<this.settings.layers; i++){
            if (i > 0){
                inputs = outputs;
            }
@@ -103,7 +103,7 @@ var NeuralNet = new Class({
        
                // for each weight
                for (var k=0; k<num_inputs-1; k++){
-           
+                    
                }
            }
        }
